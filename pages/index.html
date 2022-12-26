@@ -1,0 +1,51 @@
+<html>
+    <header>
+
+    </header>
+    <body>
+        <div id='root'></div>
+        <script>
+            const state ={
+                time: new Date(),
+                lots: [
+                    {
+                        id:1,
+                        name:'ASoft',
+                        desription: 'A soft',
+                        price:16
+
+                    },
+                    {
+                        id:2,
+                        name:'App',
+                        desription: 'App description',
+                        price:19
+
+                    },
+                ]
+            }
+
+            const header = document.createElement('header')
+            header.className = 'header'
+
+            const logo = document.createElement('img')
+            logo.className = 'logo'
+            logo.src = 'logo.png'
+
+            header.append(logo) 
+
+      
+            const clock = document.createElement('div')
+            clock.className = 'clock'
+            clock.innerText = state.time.toLocaleTimeString()
+
+        
+            
+            const domRoot = document.getElementById('root')
+
+            domRoot.append(header)
+            domRoot.append(clock)
+            domRoot.append(lots)
+        </script>
+    </body>
+</html>
